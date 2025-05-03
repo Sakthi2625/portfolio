@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import pic from '../assets/pic.png';
 
 const Hero: React.FC = () => {
   const { theme } = useTheme();
@@ -41,9 +42,12 @@ const Hero: React.FC = () => {
         className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center opacity-0 translate-y-4 transition-all duration-1000"
       >
         <div className="mb-6 overflow-hidden rounded-full border-4 border-purple-600 p-1 w-48 h-48 md:w-56 md:h-56 shadow-lg">
-          <div className="w-full h-full rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center">
-            <span className="text-white text-5xl md:text-6xl font-bold">SP</span>
-          </div>
+          <img
+            src={pic}
+            alt="Profile"
+            className="w-full h-full rounded-full object-cover"
+            style={{ objectPosition: 'center 10%' }}
+          />
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-blue-500 to-teal-400 bg-clip-text text-transparent">
